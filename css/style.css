@@ -160,6 +160,7 @@ img {
 
 .card .summary .categories .category .image {
     display: flex;
+    flex-wrap: wrap;
     gap: .5rem;
     font-weight: var(--mid-fw);
     box-sizing: border-box;
