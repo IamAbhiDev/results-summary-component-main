@@ -174,38 +174,41 @@ img {
     color: hsla(0, 0%, 0%, 0.4);
 }
 
-.card .summary .categories .category.reaction {
+/*Utilities*/
+
+.reaction {
     background: var(--light-red-bg);
 }
 
-.card .summary .categories .category.memory {
+.memory {
     background: var(--orangey-yellow-bg);
 }
 
-.card .summary .categories .category.verbal {
+.verbal {
     background: var(--green-teal-bg);
 }
 
-.card .summary .categories .category.visual {
+.visual {
     background: var(--cobalt-blue-bg);
 }
 
-
-.card .summary .categories .category.reaction .image {
+.reaction-image {
     color: var(--light-red);
 }
 
-.card .summary .categories .category.memory .image {
+.memory-image {
     color: var(--orangey-yellow);
 }
 
-.card .summary .categories .category.verbal .image {
+.verbal-image {
     color: var(--green-teal);
 }
 
-.card .summary .categories .category.visual .image {
+.visual-image {
     color: var(--cobalt-blue);
 }
+
+/*Button*/
 
 .btn {
     font-family: inherit;
