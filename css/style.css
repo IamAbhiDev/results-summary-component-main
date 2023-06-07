@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /*Reaction*/
+    --light-red: hsl(0, 100%, 67%);
+
+    /*Memory*/
+    --orangey-yellow: hsl(39, 100%, 56%);
+
+    /*Verbal*/
+    --green-teal: hsl(166, 100%, 37%);
+
+    /*Visual*/
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+
+
+    /*Reaction bg*/
+    --light-red-bg: hsla(0, 100%, 67%, 0.05);
+
+    /*Memory bg*/
+    --orangey-yellow-bg: hsla(39, 100%, 56%, 0.05);
+
+    /*Verbal bg*/
+    --green-teal-bg: hsla(166, 100%, 37%, 0.05);
+
+    /*Visual bg*/
+    --cobalt-blue-bg: hsla(234, 85%, 45%, 0.05);
+
+
+    --light-slate-blue-bg: hsl(252, 100%, 67%);
+    --light-royal-blue-bg: hsl(241, 81%, 54%);
+
+    --violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    --dark-gray-blue: hsl(224, 30%, 27%);
+    --light-lavender: hsl(241, 100%, 89%);
+
+    /*Font Weight*/
+    --light-fw: 500;
+    --mid-fw: 700;
+    --bold-fw: 800;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 1.125rem;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    place-content: center;
+}
+
+.card {
+    width: 650px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    border-radius: 2rem;
+    box-shadow: 2px 5px 30px 10px var(--cobalt-blue-bg);
+}
+
+.card .result {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-radius: 2rem;
+    background: linear-gradient(180deg, var(--light-slate-blue-bg), var(--light-royal-blue-bg) 74%);
+    padding: 2rem;
+}
+
+.card .result .result-heading {
+    color: var(--light-lavender);
+    text-align: center;
+}
+
+.result .points {
+    margin: 1.5rem auto;
+    text-align: center;
+    padding: 1.5rem 2.5rem;
+    border-radius: 50%;
+    background: linear-gradient(var(--violet-blue-circle) 54%, var(--persian-blue-circle));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: inline-block;
+}
+
+.result .points .point {
+    font-size: 3.5rem;
+    font-weight: var(--bold-fw);
+}
+
+.result .points p>span {
+    color: var(--light-lavender);
+}
+
+.card .result .comment {
+    font-weight: var(--mid-fw);
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 6px;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.8px;
+}
+
+.card .result .statistics {
+    color: var(--light-lavender);
+    text-align: center;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.card .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+}
+
+.card .summary .summary-heading {
+    margin: 0;
+    padding-bottom: 1.5rem;
+}
+
+.card .summary .categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card .summary .categories .category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: var(--mid-fw);
+}
+
+.card .summary .categories .category .image {
+    display: flex;
+    gap: .5rem;
+    font-weight: var(--mid-fw);
+    box-sizing: border-box;
+}
+
+.card .summary .categories .category .score {
+    font-weight: var(--bold-fw);
+}
+
+.dim {
+    color: hsla(0, 0%, 0%, 0.4);
+}
+
+.card .summary .categories .category.reaction {
+    background: var(--light-red-bg);
+}
+
+.card .summary .categories .category.memory {
+    background: var(--orangey-yellow-bg);
+}
+
+.card .summary .categories .category.verbal {
+    background: var(--green-teal-bg);
+}
+
+.card .summary .categories .category.visual {
+    background: var(--cobalt-blue-bg);
+}
+
+
+.card .summary .categories .category.reaction .image {
+    color: var(--light-red);
+}
+
+.card .summary .categories .category.memory .image {
+    color: var(--orangey-yellow);
+}
+
+.card .summary .categories .category.verbal .image {
+    color: var(--green-teal);
+}
+
+.card .summary .categories .category.visual .image {
+    color: var(--cobalt-blue);
+}
+
+.btn {
+    font-family: inherit;
+    color: white;
+    border: none;
+    background: var(--dark-gray-blue);
+    border-radius: 1.875rem;
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.8rem 0;
+    margin-top: 1rem;
+    transition: ease-in-out;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--light-royal-blue-bg);
+}
+
+
+/*Responsive Web Design*/
+
+@media screen and (max-width: 600px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .card .result {
+        border-radius: 0 0 2rem 2rem;
+    }
+}
